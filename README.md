@@ -11,6 +11,10 @@ Novus has decided to keep the library in sync with what is in nvd3-community mas
 
 NVD3 should work with the latest d3.js (version 3.5), but I did notice that the interactive guideline tooltip was broken for d3.js 3.5.  Changing it to d3.js 3.3.13 fixes it. This will need to be investigated.
 
+**1.7.2** Changes:
+
+* Fixed tooltips by cherry-picking "Fix tooltip position issues." https://github.com/ovvn/nvd3/commit/48e7a22e6ddec26283438f6c2865f156f0943b69
+
 **1.7.1** Changes:
 
 * Fixed axis.staggerLabels bug.
