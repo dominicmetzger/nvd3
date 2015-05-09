@@ -56,8 +56,8 @@ nv.models.stackedAreaChart = function() {
     var style = stacked.style();
 
     var showTooltip = function(e, offsetElement) {
-        var left = e.pos[0] + ( offsetElement.offsetLeft || 0 ),
-            top = e.pos[1] + ( offsetElement.offsetTop || 0),
+        var left = d3.event.pageX || ( e.pos[0] + (offsetElement.offsetLeft || 0) ),
+            top = d3.event.pageY || ( e.pos[1] + ( offsetElement.offsetTop || 0) ),
             x = xAxis.tickFormat()(stacked.x()(e.point, e.pointIndex)),
             y = yAxis.tickFormat()(stacked.y()(e.point, e.pointIndex)),
             content = tooltip(e.series.key, x, y, e, chart);
